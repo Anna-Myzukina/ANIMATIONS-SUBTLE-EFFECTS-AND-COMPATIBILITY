@@ -10,7 +10,7 @@ HTML and CSS ANIMATIONS, SUBTLE EFFECTS AND COMPATIBILITY
 - How do you add a shadow to a box? [CSS box-shadow Property](https://www.w3schools.com/cssref/css3_pr_box-shadow.asp)
 - How do you rotate an element a specified amount?
   * [CSS transform Property](https://www.w3schools.com/cssref/css3_pr_transform.asp)
-  ..* [CSS3-трансформации](https://html5book.ru/css3-transform/)
+  * [CSS3-трансформации](https://html5book.ru/css3-transform/)
 - What interesting animations can you use in CSS3?
   * []()
   * []()
