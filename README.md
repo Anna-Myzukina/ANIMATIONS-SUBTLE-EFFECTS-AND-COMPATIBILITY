@@ -6,11 +6,15 @@ HTML and CSS ANIMATIONS, SUBTLE EFFECTS AND COMPATIBILITY
 2. [CSS3 3D Graphics and Animation Effects](https://www.youtube.com/watch?v=sI92lKPJr-E)
 3. [Принципы анимации для веба](https://habr.com/ru/company/htmlacademy/blog/255583/)
 ## Learning Outcomes
-- How do you round corners of a box?
-- How do you add a shadow to a box?
+- How do you round corners of a box? [CSS Rounded Corners](https://www.w3schools.com/css/css3_borders.asp)
+- How do you add a shadow to a box? [CSS box-shadow Property](https://www.w3schools.com/cssref/css3_pr_box-shadow.asp)
 - How do you rotate an element a specified amount?
+  * [CSS transform Property](https://www.w3schools.com/cssref/css3_pr_transform.asp)
+  ..* [CSS3-трансформации](https://html5book.ru/css3-transform/)
 - What interesting animations can you use in CSS3?
-- What are pseudo-elements and what are they useful for?
+  * []()
+  * []()
+- What are pseudo-elements and what are they useful for? [CSS Pseudo-elements](https://www.w3schools.com/css/css_pseudo_elements.asp)
 ## Assignment
 - Read about CSS Transitions, stop at the Javascript section. [READ HERE](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 - Peruse through these CSS Animated Loading Icons for some animation inspiration.[READ HERE](https://tobiasahlin.com/spinkit/)
