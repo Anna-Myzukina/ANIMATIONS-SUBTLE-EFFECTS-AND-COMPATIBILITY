@@ -4,6 +4,7 @@ HTML and CSS ANIMATIONS, SUBTLE EFFECTS AND COMPATIBILITY
 Useful resourses: 
 [25 Free CSS Animation Tools & Frameworks](https://speckyboy.com/css-animation/)
 [CSS3 3D Graphics and Animation Effects](https://www.youtube.com/watch?v=sI92lKPJr-E)
+[Принципы анимации для веба](https://habr.com/ru/company/htmlacademy/blog/255583/)
 ## Learning Outcomes
 - How do you round corners of a box?
 - How do you add a shadow to a box?
