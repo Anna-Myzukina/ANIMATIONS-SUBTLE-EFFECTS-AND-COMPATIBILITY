@@ -333,7 +333,8 @@ display: inherit;
 /*====mobile======*/
 .mobile{
     position: relative;
-    background: #000;
+    background: url('../img/maxresdefault.jpg') no-repeat;
+    background-size: cover;
     width: 100%;
     height: 150vh;
 }
@@ -345,10 +346,27 @@ width: 394px;
 height: 235px;
 background: linear-gradient(0deg, #000, #262626);
 border-radius: 25px;
-
-
 }
-
+.shadow .fish1{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    animation: fishSwim1 30s linear infinite;
+}
+.shadow .fish2{
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    animation: fishSwim2 30s linear infinite;
+}
+/*
+.shadow .fish3{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    animation: fishSwim3 60s linear infinite;
+}
+*/
 .shadow img{
 position: absolute;
 top: calc(50% - 122px);
@@ -375,6 +393,56 @@ z-index: 1;
 .shadow:after{
     filter: blur(20px);
 }
+@keyframes fishSwim1 {
+    0%{
+        transform: translateX(0%);
+        opacity: 0.2;
+    }
+    25%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 1;
+    }
+}
+@keyframes fishSwim2 {
+    0%{
+        transform: translateX(200%);
+        
+    }
+    25%{
+        
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 0.5;
+    }
+}
+/*
+@keyframes fishSwim3 {
+    0%{
+        transform: translateX(300%);
+        opacity: 0.2;
+    }
+    25%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+*/
 @keyframes mobileshadow{
     0%{
         background-position: 0 0;
@@ -384,5 +452,74 @@ z-index: 1;
     }
     100%{
         background-position: 0 0;
+    }
+}
+
+/*======cloud=====*/
+.container{
+    background: url('../img/gora-rorajma-1.jpg') no-repeat;
+    background-size: cover;
+    background-position: right bottom, left top;
+    width: 100%;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.container img{
+    width: 100%;
+}
+.container .cloud1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: cloudeFirst 30s linear infinite;
+}
+.container .cloud2{
+    position: absolute;
+    top: -50px;
+    animation: cloudeSecond 15s linear infinite;
+}
+.container .cloud3{
+    position: absolute;
+    top: 0;
+    animation: cloudeThird 55s linear infinite;
+}
+.container .cloud4{
+    position: absolute;
+    top: 0;
+    animation: cloudeFourth 60s linear infinite;
+}
+
+@keyframes cloudeFirst{
+    0%{
+        transform: translateX(0%)
+    }
+    100%{
+        transform: translateX(100%)
+    }
+}
+@keyframes cloudeSecond{
+    0%{
+        transform: translateX(-100%)
+    }
+    100%{
+        transform: translateX(100%)
+    }
+}
+@keyframes cloudeThird{
+    0%{
+        transform: translateX(-100%)
+    }
+    100%{
+        transform: translateX(100%)
+    }
+}
+@keyframes cloudeFourth{
+    0%{
+        transform: translateX(-100%)
+    }
+    100%{
+        transform: translateX(100%)
     }
 }
