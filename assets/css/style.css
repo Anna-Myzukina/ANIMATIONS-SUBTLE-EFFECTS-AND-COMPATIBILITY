@@ -896,3 +896,21 @@ background-size: cover;
 .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
+
+/*===slider====*/
+.slider{
+    position: relative;
+    width: 100%;
+    height: 650px;
+}
+.slider-img{
+    width: 100%;
+    height: 100%;
+}
+.slider-img .first-slider-img,
+.slider-img .second-slider-photo{
+    position: absolute;
+   
+    width:50%;
+    height:100%;
+}
