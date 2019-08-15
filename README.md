@@ -6,6 +6,7 @@ HTML and CSS ANIMATIONS, SUBTLE EFFECTS AND COMPATIBILITY
 1. [25 Free CSS Animation Tools & Frameworks](https://speckyboy.com/css-animation/)
 2. [CSS3 3D Graphics and Animation Effects](https://www.youtube.com/watch?v=sI92lKPJr-E)
 3. [Принципы анимации для веба](https://habr.com/ru/company/htmlacademy/blog/255583/)
+4. [8 Best Animated Websites with CSS & HTML Animation to Inspire You](https://www.mockplus.com/blog/post/best-animated-websites)
 ## Learning Outcomes
 - How do you round corners of a box? [CSS Rounded Corners](https://www.w3schools.com/css/css3_borders.asp)
 - How do you add a shadow to a box? [CSS box-shadow Property](https://www.w3schools.com/cssref/css3_pr_box-shadow.asp)
@@ -24,8 +25,8 @@ HTML and CSS ANIMATIONS, SUBTLE EFFECTS AND COMPATIBILITY
 This section contains helpful links to other content. 
 It isn’t required, so consider it supplemental for if you need to dive deeper into something.
 
-1. [W3Schools on Border Radius]()
-2. [W3Schools on Box Shadow]
-3. [W3Schools on Transforms]
-4. [Using ::before and ::after Pseudo-Elements and a bunch of cool things they can be used for]
-5. [MDN Web Docs on Animation]
+1. [W3Schools on Border Radius](https://www.w3schools.com/css/css3_borders.asp)
+2. [W3Schools on Box Shadow](https://www.w3schools.com/css/css3_shadows.asp)
+3. [W3Schools on Transforms](https://www.w3schools.com/css/css3_2dtransforms.asp)
+4. [Using ::before and ::after Pseudo-Elements](https://css-tricks.com/almanac/selectors/a/after-and-before/) and [a bunch of cool things they can be used for](https://css-tricks.com/pseudo-element-roundup/)
+5. [MDN Web Docs on Animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
