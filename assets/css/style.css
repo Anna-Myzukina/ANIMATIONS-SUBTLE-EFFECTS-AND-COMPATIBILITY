@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-.smoke:before{
+.smoke:before {
     content: '';
     position: absolute;
     top: 0;
@@ -17,6 +17,8 @@ body {
 
 video {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -38,7 +40,21 @@ h1 span {
     animation: animate 1s linear forwards, fontBold 2s linear forwards, texttransform 3s linear forwards, animenone 6s linear forwards;
 }
 
-
+.sidebar-menu-up-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    z-index: 100;
+    color: #bbb;
+    font-family: 'Gochi Hand', cursive;
+    background: url('../img/bg1.jpg') no-repeat;
+    background-size: cover;
+    opacity: .5;
+    font-size: 30px;
+    transition: width 2s;
+}
 @keyframes fontBold {
     0% {
         font-weight: normal;
@@ -61,13 +77,14 @@ h1 span {
     }
 }
 
-@keyframes texttransform{
-    
+@keyframes texttransform {
+
     0% {
-   font-family: 'Shadows Into Light Two', cursive;
+        font-family: 'Shadows Into Light Two', cursive;
     }
-    100%{
-font-family: 'Lacquer', sans-serif;
+
+    100% {
+        font-family: 'Lacquer', sans-serif;
     }
 }
 
@@ -84,34 +101,36 @@ font-family: 'Lacquer', sans-serif;
         filter: blur(0);
     }
 }
-@keyframes animenone{
-    0%{
+
+@keyframes animenone {
+    0% {
         color: #ddd;
     }
-    100%{
+
+    100% {
         color: transparent;
     }
 }
 
 h1 span:nth-child(1) {
     animation-delay: 1s;
- 
-    
+
+
 }
 
 h1 span:nth-child(2) {
     animation-delay: 2s;
-    
+
 }
 
 h1 span:nth-child(3) {
     animation-delay: 2.5s;
- 
+
 }
 
 h1 span:nth-child(4) {
     animation-delay: 3s;
-    
+
 }
 
 h1 span:nth-child(5) {
@@ -129,24 +148,179 @@ h1 span:nth-child(7) {
 h1 span:nth-child(8) {
     animation-delay: 4.5s;
 }
+
+/*======card-hover-rotate-360deg======*/
+.section {
+    margin: -4px;
+    position: relative;
+    background: black;
+    
+    height: 600px;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    border: 1px solid black;
+    perspective: 600px;
+    transition: 0.5s;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(315deg, #ff0057, #5d02ff);
+    transform: skew(2deg, 2deg);
+    z-index: -3;
+
+}
+
+.card .front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.card .front h4{
+    color: #bbb;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover .front {
+    transform: rotateX(-180deg);
+    /*transform: rotateY(-180deg);*/
+}
+
+.card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: 0.5s;
+    /*overflow: hidden;*/
+}
+
+.card .back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card:hover .back {
+    transform: rotateX(0deg);
+    /*transform: rotateY(-180deg);*/
+}
+
+.card .back .details {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+}
+
+.card .back .details h2 {
+    margin: 0;
+    padding: 0;
+    color: #e91e63;
+    font-size: 30px;
+}
+
+.card .back .details h2 span {
+    color: #a7a7a7;
+}
+
+.social-icons {
+    padding: 10px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: #262626;
+    color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.social-icons a .fa {
+    line-height: 40px;
+}
+
+.social-icons a:hover {
+    background: #e91e63;
+}
+
+/*
+@keyframes appearblock{
+    0%{
+display: none;
+    }
+    100%{
+display: inherit;
+    }
+}*/
 /*=======rotation-box=======*/
 .rotation-box {
     position: relative;
-    height: 150vh;
+    height: 500px;
     background: url('../img/icon.jpg') no-repeat;
     background-size: 100% 100%;
-    
+
 }
-.box{
+
+.box {
     position: absolute;
     top: calc(50% - 150px);
     left: calc(75% - 100px);
     transform: perspective(1000px) rotateY(-45deg);
     width: 200px;
     height: 300px;
-    transform-style: preserve-3d; 
+    transform-style: preserve-3d;
 }
-.box::before{
+
+.box::before {
     content: '';
     position: absolute;
     bottom: -100px;
@@ -159,16 +333,17 @@ h1 span:nth-child(8) {
     transform: rotateX(90deg);
 }
 
-.box div{
+.box div {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    animation: rotationEffect 5s linear infinite; 
+    animation: rotationEffect 5s linear infinite;
 }
-.box div span{
+
+.box div span {
     position: absolute;
     top: 0;
     left: 0;
@@ -178,175 +353,173 @@ h1 span:nth-child(8) {
     background: linear-gradient(0deg, #f1f1f1, #bbb, #f1f1f1);
     border-radius: 20px;
 }
-.box div span:nth-child(1){
+
+.box div span:nth-child(1) {
     transform: rotateX(0deg);
 }
-.box div span:nth-child(2){
+
+.box div span:nth-child(2) {
     transform: rotateX(45deg);
 }
-.box div span:nth-child(3){
+
+.box div span:nth-child(3) {
     transform: rotateX(-45deg);
 }
-.box div span:nth-child(4){
+
+.box div span:nth-child(4) {
     transform: rotateX(90deg);
 }
 
-@keyframes rotationEffect{
-    0%{
+@keyframes rotationEffect {
+    0% {
         transform: perspective(1000px) rotateX(0deg);
     }
-    100%{
+
+    100% {
         transform: perspective(1000px) rotateX(359deg);
     }
 }
 
-/*======card-hover-rotate-360deg======*/
-.section{
+/*====glass effect=====*/
+.glass-effect {
+    background: url('../img/mountain2.jpg') no-repeat;
+    background-size: cover;
+    background-position: right bottom, left top;
+    width: 100%;
+    height: 650px;
     position: relative;
-    background: black;
-    width: 100%;
-    height: 150vh;
-}
-.section::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-}
-.card{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 400px;
-    transform-style: preserve-3d;
-    border: 1px solid black;
-    perspective: 600px;
-    transition: 0.5s;
-}
-.card:before{
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(315deg, #ff0057, #5d02ff);
-    transform: skew(2deg, 2deg);
-    z-index: -3;
-
-}
-.card .front{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    transition: 0.5s;
     overflow: hidden;
 }
-.card:hover .front{
-    transform: rotateX(-180deg);
-    /*transform: rotateY(-180deg);*/
-}
-.card .back{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    backface-visibility: hidden;
-    transform: rotateX(180deg);
-    transition: 0.5s;
-    /*overflow: hidden;*/
-}
-.card .back::before{
+
+.box-glass:before {
     content: '';
     position: absolute;
+    background: url('../img/mountain2.jpg') no-repeat;
+    /*background-position: right bottom, left top;*/
+    background-attachment: fixed;
+    box-shadow: 40px 0 100px rgba(0, 0, 0, .2),
+        -40px 0 100px rgba(0, 0, 0, .2);
+    background-size: 120%;
+    background-position: 20% 100%;
+    top: 0;
+    left: -50%;
+    width: 300px;
+    height: 100%;
+    animation: glassEffect 15s ease-in-out infinite;
+}
+
+@keyframes glassEffect {
+
+    0%,
+    100% {
+        left: 0;
+    }
+
+    50% {
+        left: calc(100% - 300px);
+    }
+}
+/*======cloud=====*/
+.container {
+    background: url('../img/gora-rorajma-1.jpg') no-repeat;
+    background-size: cover;
+    background-position: right bottom, left top;
+    width: 100%;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.container img {
+    width: 100%;
+}
+
+.container .cloud1 {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    animation: cloudeFirst 30s linear infinite;
 }
-.card:hover .back{
-    transform: rotateX(0deg);
-    /*transform: rotateY(-180deg);*/
-}
-.card .back .details{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transform: translateY(-50%);
-}
-.card .back .details h2{
-    margin: 0;
-    padding: 0;
-    color: #e91e63;
-    font-size: 30px;
-}
-.card .back .details h2 span{
-    color: #a7a7a7;
-}
-.social-icons{
-    padding: 10px 0;
-}
-.social-icons a{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    background: #262626;
-    color: #f1f1f1;
-    text-decoration: none;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-.social-icons a .fa{
-    line-height: 40px;
-}
-.social-icons a:hover{
-    background: #e91e63;
-}
-/*
-@keyframes appearblock{
-    0%{
-display: none;
-    }
-    100%{
-display: inherit;
-    }
-}*/
 
-/*====mobile======*/
-.mobile{
+.container .cloud2 {
+    position: absolute;
+    top: -50px;
+    animation: cloudeSecond 15s linear infinite;
+}
+
+.container .cloud3 {
+    position: absolute;
+    top: 0;
+    animation: cloudeThird 55s linear infinite;
+}
+
+.container .cloud4 {
+    position: absolute;
+    top: 0;
+    animation: cloudeFourth 60s linear infinite;
+}
+
+@keyframes cloudeFirst {
+    0% {
+        transform: translateX(0%)
+    }
+
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes cloudeSecond {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes cloudeThird {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes cloudeFourth {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(100%)
+    }
+}
+/*====mobile live border======*/
+.mobile {
     position: relative;
     background: url('../img/maxresdefault.jpg') no-repeat;
     background-size: cover;
+    background-position: top right;
     width: 100%;
-    height: 150vh;
+    height: 550px;
 }
-.shadow{
-position: absolute;
-top: calc(50% - 130px);
-left: calc(50% - 210px);
-width: 394px;
-height: 235px;
-background: linear-gradient(0deg, #000, #262626);
-border-radius: 25px;
+
+.shadow {
+    position: absolute;
+    top: calc(50% - 130px);
+    left: calc(50% - 210px);
+    width: 394px;
+    height: 235px;
+    background: linear-gradient(0deg, #000, #262626);
+    border-radius: 25px;
 }
+
+/*
 .shadow .fish1{
     position: absolute;
     top: 0;
@@ -359,7 +532,7 @@ border-radius: 25px;
     left: -100%;
     animation: fishSwim2 30s linear infinite;
 }
-/*
+
 .shadow .fish3{
     position: absolute;
     top: 0;
@@ -367,17 +540,17 @@ border-radius: 25px;
     animation: fishSwim3 60s linear infinite;
 }
 */
-.shadow img{
-position: absolute;
-top: calc(50% - 122px);
-left: calc(50% - 200px);
-width: 400px;
-height: 250px;
-z-index: 1;
+.shadow img {
+    position: absolute;
+    top: calc(50% - 122px);
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 250px;
+    z-index: 1;
 }
 
 .shadow:before,
-.shadow:after{
+.shadow:after {
     content: '';
     position: absolute;
     top: 0;
@@ -388,11 +561,14 @@ z-index: 1;
     width: 100%;
     height: 100%;
     animation: mobileshadow 20s linear infinite;
-   
+
 }
-.shadow:after{
+
+.shadow:after {
     filter: blur(20px);
 }
+
+/*
 @keyframes fishSwim1 {
     0%{
         transform: translateX(0%);
@@ -425,7 +601,7 @@ z-index: 1;
         opacity: 0.5;
     }
 }
-/*
+
 @keyframes fishSwim3 {
     0%{
         transform: translateX(300%);
@@ -443,103 +619,42 @@ z-index: 1;
     }
 }
 */
-@keyframes mobileshadow{
-    0%{
+@keyframes mobileshadow {
+    0% {
         background-position: 0 0;
     }
-    50%{
+
+    50% {
         background-position: 300% 0;
     }
-    100%{
+
+    100% {
         background-position: 0 0;
     }
 }
 
-/*======cloud=====*/
-.container{
-    background: url('../img/gora-rorajma-1.jpg') no-repeat;
-    background-size: cover;
-    background-position: right bottom, left top;
-    width: 100%;
-    height: 650px;
-    position: relative;
-    overflow: hidden;
-    
-}
-.container img{
-    width: 100%;
-}
-.container .cloud1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: cloudeFirst 30s linear infinite;
-}
-.container .cloud2{
-    position: absolute;
-    top: -50px;
-    animation: cloudeSecond 15s linear infinite;
-}
-.container .cloud3{
-    position: absolute;
-    top: 0;
-    animation: cloudeThird 55s linear infinite;
-}
-.container .cloud4{
-    position: absolute;
-    top: 0;
-    animation: cloudeFourth 60s linear infinite;
-}
 
-@keyframes cloudeFirst{
-    0%{
-        transform: translateX(0%)
-    }
-    100%{
-        transform: translateX(100%)
-    }
-}
-@keyframes cloudeSecond{
-    0%{
-        transform: translateX(-100%)
-    }
-    100%{
-        transform: translateX(100%)
-    }
-}
-@keyframes cloudeThird{
-    0%{
-        transform: translateX(-100%)
-    }
-    100%{
-        transform: translateX(100%)
-    }
-}
-@keyframes cloudeFourth{
-    0%{
-        transform: translateX(-100%)
-    }
-    100%{
-        transform: translateX(100%)
-    }
-}
+
 /*====mobile jumping screen====*/
-.jumping-screen{
+.jumping-screen {
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
- 
+    background: url('../img/network-background.png') no-repeat;
+    background-size: cover;
+    background-position: top left;
 }
-.box-iphone{
+
+.box-iphone {
     position: relative;
     width: 700px;
     height: 461px;
 }
 
-.box-iphone .screen{
+.box-iphone .screen {
     position: absolute;
     top: -8px;
     left: -32px;
@@ -547,57 +662,216 @@ z-index: 1;
 
 }
 
-.box-iphone:hover .screen5{
+.box-iphone:hover .screen5 {
     transform: translateY(-160px);
     opacity: 1;
 }
-.box-iphone:hover .screen4{
+
+.box-iphone:hover .screen4 {
     transform: translateY(-120px);
     opacity: .8;
 }
-.box-iphone:hover .screen3{
+
+.box-iphone:hover .screen3 {
     transform: translateY(-80px);
     opacity: .6;
 }
-.box-iphone:hover .screen2{
+
+.box-iphone:hover .screen2 {
     transform: translateY(-40px);
     opacity: .4;
 }
-.box-iphone:hover .screen1{
+
+.box-iphone:hover .screen1 {
     transform: translateY(0px);
     opacity: .2;
 }
-/*====glass effect=====*/
-.glass-effect{
-    background: url('../img/mountain2.jpg') no-repeat;
-    background-size: cover;
-    background-position: right bottom, left top;
+
+/*====wave-move====*/
+.wave-move{
+    padding: 0;
+    margin: 0;
+    position: relative;
     width: 100%;
     height: 650px;
-    position: relative;
-    overflow: hidden;
+    background: url('../img/bg1.jpg') no-repeat;
+    background-size: cover;
 }
-.box-glass:before{
-    content: '';
+.img-wave{
+    width: 100%;
+}
+.wave{
     position: absolute;
-    background: url('../img/mountain2.jpg') no-repeat;
-    /*background-position: right bottom, left top;*/
-    background-attachment: fixed;
-    box-shadow: 40px 0 100px rgba(0, 0, 0, .2),
-                -40px 0 100px rgba(0, 0, 0, .2);
-    background-size: 120%;
-    background-position: 20% 100%;
-    top: 0;
-    left: -50%;
-    width: 300px;
-    height: 100%;
-    animation: glassEffect 15s ease-in-out infinite;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+    animation: wave 10s linear infinite;
 }
-@keyframes glassEffect{
-    0%,100%{
-        left: 0;
+@keyframes wave{
+    0%{
+        transform: translateX(0) translateY(0) scaleY(1);
     }
     50%{
-        left: calc(100% - 300px);
+        transform: translateX(0) translateY(10%) scaleY(.5) perspective(0);
     }
+    100%{
+        transform: translateX(0) translateY(0) scaleY(1) perspective(500px);
+    }
+}
+
+/*===banner scrolling text====*/
+
+.scrolling-text{
+    position: relative;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    overflow: hidden;
+}
+.scrolling-div{
+    position: relative;
+    width: 50%;
+    background: #5c206b;
+    overflow: hidden;
+}
+.scrolling-div:nth-child(1){
+    position: relative;
+    width: 50%;
+    background: url('../img/road2.png');
+background-size: cover;
+    overflow: hidden;
+}
+.scrolling-div:nth-child(1) h2{
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: transparent;
+    left: 100%;
+}
+.scrolling-div h2{
+    position: absolute;
+    white-space: nowrap;
+    font-size: 12em;
+    line-height: 100vh;
+    color: #fff;
+    animation: scrollingText 60s linear infinite;
+}
+@keyframes scrollingText{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/*===anime-menu*/
+.anime-menu{
+    position: relative;
+    width: 100%;
+    height: 650px;
+
+}
+
+.list1{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+}
+.list2{
+    background: red;
+}
+.list3{
+    background: yellow;
+}
+.list4{
+    background: orange;
+}
+.list5{
+    background: green;
+}
+.list6{
+    background: violet;
+}
+.list7{
+    background: brown;
+}
+.list8{
+    background: purple;
+}
+/*=====violet wave=======*/
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.new-wave{
+    position: relative;
+    width: 100%;
+    height: 650px;
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave1 {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
 }
