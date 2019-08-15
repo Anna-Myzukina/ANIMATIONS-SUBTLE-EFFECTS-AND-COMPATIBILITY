@@ -454,7 +454,50 @@ z-index: 1;
         background-position: 0 0;
     }
 }
+/*====mobile jumping screen====*/
+.jumping-screen{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.box-iphone{
+    position: relative;
+    width: 700px;
+    height: 461px;
+}
 
+.box-iphone .screen{
+    position: absolute;
+    top: -8px;
+    left: -32px;
+    transition: 0.5s;
+
+}
+
+.box-iphone:hover .screen5{
+    transform: translateY(-160px);
+    opacity: 1;
+}
+.box-iphone:hover .screen4{
+    transform: translateY(-120px);
+    opacity: .8;
+}
+.box-iphone:hover .screen3{
+    transform: translateY(-80px);
+    opacity: .6;
+}
+.box-iphone:hover .screen2{
+    transform: translateY(-40px);
+    opacity: .4;
+}
+.box-iphone:hover .screen1{
+    transform: translateY(0px);
+    opacity: .2;
+}
 /*======cloud=====*/
 .container{
     background: url('../img/gora-rorajma-1.jpg') no-repeat;
