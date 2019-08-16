@@ -196,7 +196,7 @@ list-style: none;
 }
 .menu-fixed{ 
     position: relative;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
     display: inline-block;
     color: white;
     font-size: 35px;
