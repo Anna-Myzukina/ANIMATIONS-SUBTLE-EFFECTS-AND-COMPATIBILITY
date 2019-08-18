@@ -8,6 +8,8 @@ HTML and CSS ANIMATIONS, SUBTLE EFFECTS AND COMPATIBILITY
 3. [Принципы анимации для веба](https://habr.com/ru/company/htmlacademy/blog/255583/)
 4. [8 Best Animated Websites with CSS & HTML Animation to Inspire You](https://www.mockplus.com/blog/post/best-animated-websites)
 5. [Copy-and-Paste CSS Animation Cheat Sheets](https://1stwebdesigner.com/copy-and-paste-css-animation-cheat-sheets/)
+6. [10 stunning hover effects with sass - CodePen
+](https://codepen.io/caraujo/pen/LVPzxO)
 ## Learning Outcomes
 - How do you round corners of a box? [CSS Rounded Corners](https://www.w3schools.com/css/css3_borders.asp)
 - How do you add a shadow to a box? [CSS box-shadow Property](https://www.w3schools.com/cssref/css3_pr_box-shadow.asp)
