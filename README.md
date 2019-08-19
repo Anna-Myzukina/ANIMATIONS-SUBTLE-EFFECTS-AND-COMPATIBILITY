@@ -10,6 +10,7 @@ HTML and CSS ANIMATIONS, SUBTLE EFFECTS AND COMPATIBILITY
 5. [Copy-and-Paste CSS Animation Cheat Sheets](https://1stwebdesigner.com/copy-and-paste-css-animation-cheat-sheets/)
 6. [10 stunning hover effects with sass - CodePen
 ](https://codepen.io/caraujo/pen/LVPzxO)
+7. [Срезать углы](http://webdiz.com.ua/figury/kak-srezat-ugly-na-css)
 ## Learning Outcomes
 - How do you round corners of a box? [CSS Rounded Corners](https://www.w3schools.com/css/css3_borders.asp)
 - How do you add a shadow to a box? [CSS box-shadow Property](https://www.w3schools.com/cssref/css3_pr_box-shadow.asp)
