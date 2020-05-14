@@ -1,6 +1,7 @@
 # Project: CSS animations effects.
 HTML/CSS animations, subtle effects and compatibility.
-  * [Live version](https://anna-myzukina.github.io/ANIMATIONS-SUBTLE-EFFECTS-AND-COMPATIBILITY/)
+  ## Live version:
+  * [Project](https://anna-myzukina.github.io/ANIMATIONS-SUBTLE-EFFECTS-AND-COMPATIBILITY/)
 
 ### Useful resourses: 
 1. [25 Free CSS Animation Tools & Frameworks](https://speckyboy.com/css-animation/)
