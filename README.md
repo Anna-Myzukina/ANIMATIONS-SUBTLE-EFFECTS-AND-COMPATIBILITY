@@ -1,5 +1,5 @@
-# ANIMATIONS-SUBTLE-EFFECTS-AND-COMPATIBILITY
-HTML and CSS ANIMATIONS, SUBTLE EFFECTS AND COMPATIBILITY
+# Project: CSS animations effects.
+HTML/CSS animations, subtle effects and compatibility.
   * [Live version](https://anna-myzukina.github.io/ANIMATIONS-SUBTLE-EFFECTS-AND-COMPATIBILITY/)
 
 ### Useful resourses: 
